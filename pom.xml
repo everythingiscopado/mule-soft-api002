@@ -3,13 +3,16 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>bb224955-86f1-423a-986b-015e44c280d8</groupId>
     <artifactId>mule-soft-api002</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>mule-application</packaging>
     <name>MuleSoftAPI002</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <mule.maven.plugin.version>4.0.0</mule.maven.plugin.version>
+
+        <!-- Added for Copado Plugin -->
+        <app.runtime>4.6.14:3</app.runtime>
     </properties>
     <build>
         <plugins>
@@ -66,6 +69,19 @@
             <url>https://repository.mulesoft.org/releases/</url>
             <layout>default</layout>
         </repository>
+        <!-- Added for Copado Plugin -->
+        <repository>
+            <id>MuleRepository</id>
+            <name>MuleRepository</name>
+            <url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -78,7 +94,6 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
     <distributionManagement>
         <repository>
             <id>anypoint-exchange-v2</id>
@@ -87,7 +102,6 @@
             <layout>default</layout>
         </repository>
     </distributionManagement>
-    
     <dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
@@ -95,5 +109,14 @@
             <version>1.10.3</version>
             <classifier>mule-plugin</classifier>
         </dependency>
-    </dependencies>
+        <!-- Added for Copado Plugin -->
+        <!--
+        <dependency>
+            <groupId>org.mule.connectors</groupId>
+            <artifactId>mule-sockets-connector</artifactId>
+            <version>1.2.2</version>
+            <classifier>mule-plugin</classifier>
+        </dependency>
+        -->
+    </dependencies>    
 </project>
