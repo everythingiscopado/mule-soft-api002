@@ -58,9 +58,9 @@
     </build>
     <repositories>
         <repository>
-            <id>anypoint-exchange-v2</id>
+            <id>anypoint-exchange-v3</id>
             <name>Anypoint Exchange</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
             <layout>default</layout>
         </repository>
         <repository>
@@ -96,10 +96,10 @@
     </pluginRepositories>
     <distributionManagement>
         <repository>
-            <id>anypoint-exchange-v2</id>
+            <id>anypoint-exchange-v3</id>
             <name>Anypoint Exchange</name>
             <!-- Can update with properties i.e. https://${domain}/api/v2/organizations/${groupid}/maven -->
-            <url>https://maven.anypoint.mulesoft.com/api/v2/organizations/bb224955-86f1-423a-986b-015e44c280d8/maven</url>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/bb224955-86f1-423a-986b-015e44c280d8/maven</url>
             <layout>default</layout>
         </repository>
     </distributionManagement>
